@@ -1,0 +1,12 @@
+.story__content {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 6rem 8vw;
+  background-color: $color-grey-light-1;
+
+  &__text {
+    font-size: 1.6rem;
+  }
+}
