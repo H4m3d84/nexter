@@ -1,0 +1,34 @@
+.footer {
+  &__textbox {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #fff;
+  }
+}
+
+.nav {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 6.4rem;
+
+  &__link {
+    &:link,
+    &:visited {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.6rem;
+      padding: 0.8rem 1.2rem;
+      transition: all 0.2s;
+      display: block;
+    }
+
+    &:hover,
+    &:active {
+      background-color: rgba($color-grey-light-2, 0.2);
+      transform: translateY(-0.4rem);
+    }
+  }
+}
