@@ -90,6 +90,11 @@ body {
   font-size: 1.8rem;
 }
 
+.heading-5 {
+  font-size: 1.6rem;
+  color: #f9f7f6;
+}
+
 .u-margin-bottom-vs {
   margin-bottom: 1.2rem;
 }
@@ -144,6 +149,7 @@ body {
 
 .features {
   grid-column: center-start/center-end;
+  margin: 15rem 0;
 }
 
 .story__pictures {
@@ -156,8 +162,11 @@ body {
 }
 
 .homes {
-  background-color: lightpink;
   grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 6.4rem;
+  margin: 15rem 0;
 }
 
 .gallery {
@@ -170,15 +179,17 @@ body {
   grid-column: full-start/full-end;
 }
 
-.btn:link, .btn:visited {
+.btn {
   text-decoration: none;
   font-size: 2rem;
   padding: 1.2rem 2.4rem;
   color: white;
   background-color: #c69963;
   transition: all 0.2s;
+  border: none;
+  font-family: "Vazir", sans-serif;
 }
-.btn:hover, .btn:active {
+.btn:hover {
   background-color: #b28451;
 }
 
@@ -198,6 +209,71 @@ body {
 .feature__detail {
   font-size: 1.6rem;
   grid-column: 2/3;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f7f6;
+  position: relative;
+}
+.home__img {
+  width: 100%;
+}
+.home__heartbtn {
+  border: none;
+}
+.home__heartbtn__svg {
+  width: 2.4rem;
+  height: 2.4rem;
+  fill: #c69963;
+  position: absolute;
+  top: 2.4rem;
+  right: 2.4rem;
+  cursor: pointer;
+}
+.home__headerbox {
+  text-align: center;
+  margin-top: -2.5rem;
+}
+.home__header {
+  background-color: #101d2c;
+  padding: 1.2rem 4.8rem;
+  display: inline-block;
+}
+.home__details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+  padding: 2.4rem 1.2rem;
+  font-size: 1.6rem;
+}
+.home__svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  stroke: #c69963;
+}
+.home__location {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.home__rooms {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.home__area {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.home__price {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
 }
 
 .story__content {

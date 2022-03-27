@@ -1,0 +1,74 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-grey-light-1;
+  position: relative;
+
+  &__img {
+    width: 100%;
+  }
+
+  &__heartbtn {
+    border: none;
+
+    &__svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      fill: $color-primary;
+      position: absolute;
+      top: 2.4rem;
+      right: 2.4rem;
+      cursor: pointer;
+    }
+  }
+
+  &__headerbox {
+    text-align: center;
+    margin-top: -2.5rem;
+  }
+
+  &__header {
+    background-color: $color-secondary;
+    padding: 1.2rem 4.8rem;
+    display: inline-block;
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+
+    padding: 2.4rem 1.2rem;
+    font-size: 1.6rem;
+  }
+
+  &__svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    stroke: $color-primary;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  &__rooms {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  &__area {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+}

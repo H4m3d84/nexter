@@ -28,6 +28,7 @@
 
 .features {
   grid-column: center-start / center-end;
+  margin: 15rem 0;
 }
 
 .story__pictures {
@@ -40,8 +41,11 @@
 }
 
 .homes {
-  background-color: lightpink;
   grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 6.4rem;
+  margin: 15rem 0;
 }
 
 .gallery {
