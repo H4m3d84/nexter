@@ -150,7 +150,7 @@ body {
   grid-row: 1/2;
 }
 
-.realtours {
+.realtors {
   background-color: lightcyan;
   grid-column: col-start 7/full-end;
   grid-row: 1/2;
@@ -449,6 +449,31 @@ body {
 }
 .navigation__btn::after {
   transform: translateY(1.3rem);
+}
+
+.realtors {
+  background-color: #101d2c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+}
+.realtors__agent {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 2.4rem;
+  align-items: center;
+}
+.realtors__agent__img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+.realtors__agent__detail {
+  color: #f9f7f6;
+  font-weight: 100;
+  margin-top: 0.8rem;
 }
 
 .story__content {

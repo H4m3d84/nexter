@@ -1,0 +1,27 @@
+.realtors {
+  background-color: $color-secondary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+
+  &__agent {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 2.4rem;
+    align-items: center;
+
+    &__img {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+    }
+
+    &__detail {
+      color: $color-grey-light-1;
+      font-weight: 100;
+      margin-top: 0.8rem;
+    }
+  }
+}
