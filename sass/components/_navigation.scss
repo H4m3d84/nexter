@@ -1,0 +1,38 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+  &__button {
+    margin-top: 2.4rem;
+    border: none;
+    cursor: pointer;
+    height: 4rem;
+    background-color: transparent;
+  }
+
+  &__btn {
+    width: 4rem;
+    height: 0.2rem;
+    background-color: white;
+    display: block;
+    line-height: 0;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 4rem;
+      height: 0.2rem;
+      background-color: white;
+      display: block;
+    }
+
+    &::before {
+      transform: translateY(-1.5rem);
+    }
+
+    &::after {
+      transform: translateY(1.3rem);
+    }
+  }
+}

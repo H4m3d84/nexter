@@ -77,6 +77,11 @@ body {
   color: #6d5d4b;
 }
 
+.heading-1 {
+  font-size: 4.8rem;
+  color: #f9f7f6;
+}
+
 .heading-2 {
   font-size: 3.2rem;
 }
@@ -123,6 +128,11 @@ body {
   padding: 3.2rem 0;
 }
 
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content min-content 1fr;
+}
+
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
@@ -136,7 +146,6 @@ body {
 }
 
 .header {
-  background-color: lightcoral;
   grid-column: full-start/col-end 6;
   grid-row: 1/2;
 }
@@ -307,6 +316,43 @@ body {
   object-fit: cover;
 }
 
+.header {
+  background-image: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.9)), url("/img/hero.jpeg");
+  padding: 8rem;
+}
+.header__logo {
+  height: 3.2rem;
+  justify-self: center;
+}
+.header__seenon-text {
+  color: #f9f7f6;
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  gap: 2.4rem;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+.header__seenon-text::before, .header__seenon-text::after {
+  content: "";
+  height: 1px;
+  display: block;
+  background-color: #f9f7f6;
+}
+.header__seenon-logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__btn {
+  align-self: start;
+  justify-self: start;
+  margin-top: 2.4rem;
+}
+.header__img {
+  height: 3.2rem;
+}
+
 .home {
   display: flex;
   flex-direction: column;
@@ -370,6 +416,39 @@ body {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.navigation__button {
+  margin-top: 2.4rem;
+  border: none;
+  cursor: pointer;
+  height: 4rem;
+  background-color: transparent;
+}
+.navigation__btn {
+  width: 4rem;
+  height: 0.2rem;
+  background-color: white;
+  display: block;
+  line-height: 0;
+}
+.navigation__btn::before, .navigation__btn::after {
+  content: "";
+  width: 4rem;
+  height: 0.2rem;
+  background-color: white;
+  display: block;
+}
+.navigation__btn::before {
+  transform: translateY(-1.5rem);
+}
+.navigation__btn::after {
+  transform: translateY(1.3rem);
 }
 
 .story__content {
