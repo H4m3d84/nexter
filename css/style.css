@@ -69,6 +69,11 @@ html {
 html {
   font-size: 62.5%;
 }
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
 
 body {
   font-family: "vazir", sans-serif;
@@ -131,6 +136,7 @@ body {
 .header {
   display: grid;
   grid-template-rows: 1fr min-content min-content 1fr;
+  grid-template-columns: minmax(min-content, 1fr);
 }
 
 .container {
@@ -138,16 +144,48 @@ body {
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
+@media only screen and (max-width: 62.5em) {
+  .container {
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .container {
+    grid-template-rows: 6rem 80vh min-content min-content 40vw min-content repeat(3, min-content);
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .container {
+    grid-template-rows: 6rem 80vh;
+  }
+}
 
 .navigation {
   background-color: #c69963;
   grid-column: sidebar-start/sidebar-end;
   grid-row: 1/-1;
 }
+@media only screen and (max-width: 62.5em) {
+  .navigation {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+}
 
 .header {
   grid-column: full-start/col-end 6;
   grid-row: 1/2;
+}
+@media only screen and (max-width: 62.5em) {
+  .header {
+    grid-row: 2/3;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .header {
+    grid-column: full-start/full-end;
+  }
 }
 
 .realtors {
@@ -155,19 +193,46 @@ body {
   grid-column: col-start 7/full-end;
   grid-row: 1/2;
 }
+@media only screen and (max-width: 62.5em) {
+  .realtors {
+    grid-row: 2/3;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .realtors {
+    grid-row: 3/4;
+    grid-column: full-start/full-end;
+  }
+}
 
 .features {
   grid-column: center-start/center-end;
   margin: 15rem 0;
+}
+@media only screen and (max-width: 56.25em) {
+  .features {
+    margin: 5rem 0;
+  }
 }
 
 .story__pictures {
   background-color: lightgray;
   grid-column: full-start/col-end 4;
 }
+@media only screen and (max-width: 56.25em) {
+  .story__pictures {
+    grid-column: full-start/full-end;
+  }
+}
 
 .story__content {
   grid-column: col-start 5/full-end;
+}
+@media only screen and (max-width: 56.25em) {
+  .story__content {
+    grid-column: full-start/full-end;
+    grid-row: 5/6;
+  }
 }
 
 .homes {
@@ -176,6 +241,11 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 6.4rem;
   margin: 15rem 0;
+}
+@media only screen and (max-width: 43.75em) {
+  .homes {
+    margin: 10rem 0;
+  }
 }
 
 .gallery {
@@ -203,6 +273,7 @@ body {
   transition: all 0.2s;
   border: none;
   font-family: "Vazir", sans-serif;
+  cursor: pointer;
 }
 .btn:hover {
   background-color: #b28451;
@@ -239,6 +310,16 @@ body {
   align-items: center;
   justify-items: center;
   margin-bottom: 6.4rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .nav {
+    grid-template-rows: repeat(2, 8rem);
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .nav {
+    grid-template-rows: repeat(3, 8rem);
+  }
 }
 .nav__link:link, .nav__link:visited {
   color: #fff;
@@ -324,6 +405,11 @@ body {
   height: 3.2rem;
   justify-self: center;
 }
+.header__btn {
+  align-self: start;
+  justify-self: start;
+  margin-top: 2.4rem;
+}
 .header__seenon-text {
   color: #f9f7f6;
   font-size: 1.6rem;
@@ -344,13 +430,27 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.header__btn {
-  align-self: start;
-  justify-self: start;
-  margin-top: 2.4rem;
+@media only screen and (max-width: 43.75em) {
+  .header__seenon-logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.4rem;
+    align-items: center;
+    justify-items: center;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .header__seenon-logos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4.8rem;
+    align-items: center;
+    justify-items: center;
+  }
 }
 .header__img {
-  height: 3.2rem;
+  max-height: 2.4rem;
+  width: auto;
 }
 
 .home {
@@ -423,12 +523,24 @@ body {
   justify-content: center;
   align-items: start;
 }
+@media only screen and (max-width: 62.5em) {
+  .navigation {
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
 .navigation__button {
   margin-top: 2.4rem;
   border: none;
   cursor: pointer;
   height: 4rem;
   background-color: transparent;
+}
+@media only screen and (max-width: 62.5em) {
+  .navigation__button {
+    margin-top: 0;
+    margin-left: 2.4rem;
+  }
 }
 .navigation__btn {
   width: 4rem;
@@ -450,6 +562,14 @@ body {
 .navigation__btn::after {
   transform: translateY(1.3rem);
 }
+@media only screen and (max-width: 62.5em) {
+  .navigation__btn::before {
+    transform: translateY(-1.2rem);
+  }
+  .navigation__btn::after {
+    transform: translateY(1rem);
+  }
+}
 
 .realtors {
   background-color: #101d2c;
@@ -458,6 +578,32 @@ body {
   justify-content: center;
   align-items: center;
   gap: 3.2rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .realtors {
+    padding: 6rem 0;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .realtors {
+    padding: 4.8rem 0;
+  }
+}
+.realtors__figures {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .realtors__figures {
+    flex-direction: row;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .realtors__figures {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
 }
 .realtors__agent {
   display: grid;
@@ -512,6 +658,15 @@ body {
   grid-row: 5/7;
   transform: scale(4.1);
   box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.2);
+}
+@media only screen and (max-width: 56.25em) {
+  .story__pictures__img--2 {
+    transform: scale(1);
+    grid-column: 4/7;
+    grid-row: 5/7;
+    width: 120%;
+    height: 120%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

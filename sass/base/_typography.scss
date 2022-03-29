@@ -1,5 +1,9 @@
 html {
   font-size: 62.5%;
+
+  @include respond(largest) {
+    font-size: 56.25%;
+  }
 }
 
 body {

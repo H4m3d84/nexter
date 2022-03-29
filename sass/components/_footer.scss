@@ -14,6 +14,14 @@
   justify-items: center;
   margin-bottom: 6.4rem;
 
+  @include respond(medium) {
+    grid-template-rows: repeat(2, 8rem);
+  }
+
+  @include respond(smallest) {
+    grid-template-rows: repeat(3, 8rem);
+  }
+
   &__link {
     &:link,
     &:visited {

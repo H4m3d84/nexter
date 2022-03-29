@@ -6,37 +6,92 @@
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end]
     minmax(6rem, 1fr) [full-end];
+
+  @include respond(large) {
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end]
+      minmax(6rem, 1fr) [full-end];
+  }
+
+  @include respond(medium) {
+    grid-template-rows: 6rem 80vh min-content min-content 40vw min-content repeat(
+        3,
+        min-content
+      );
+  }
+
+  @include respond(small) {
+    grid-template-rows: 6rem 80vh;
+  }
 }
 
 .navigation {
   background-color: $color-primary;
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1;
+
+  @include respond(large) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
 }
 
 .header {
   grid-column: full-start / col-end 6;
   grid-row: 1 / 2;
+
+  @include respond(large) {
+    grid-row: 2 / 3;
+  }
+
+  @include respond(medium) {
+    grid-column: full-start / full-end;
+  }
 }
 
 .realtors {
   background-color: lightcyan;
   grid-column: col-start 7 / full-end;
   grid-row: 1 / 2;
+
+  @include respond(large) {
+    grid-row: 2 / 3;
+  }
+
+  @include respond(medium) {
+    grid-row: 3 / 4;
+    grid-column: full-start / full-end;
+  }
 }
 
 .features {
   grid-column: center-start / center-end;
   margin: 15rem 0;
+
+  @include respond(medium) {
+    margin: 5rem 0;
+  }
 }
 
 .story__pictures {
   background-color: lightgray;
   grid-column: full-start / col-end 4;
+
+  @include respond(medium) {
+    grid-column: full-start / full-end;
+  }
 }
 
 .story__content {
   grid-column: col-start 5 / full-end;
+
+  @include respond(medium) {
+    grid-column: full-start / full-end;
+    grid-row: 5 / 6;
+  }
 }
 
 .homes {
@@ -45,6 +100,10 @@
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 6.4rem;
   margin: 15rem 0;
+
+  @include respond(small) {
+    margin: 10rem 0;
+  }
 }
 
 .gallery {
